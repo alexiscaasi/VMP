@@ -148,10 +148,13 @@ function Index() {
             <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
               {trust.map(({ icon: Icon, title, sub }) => (
                 <div key={title} className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30">
+                  <span
+                    className="flex h-10 w-10 items-center justify-center rounded-full"
+                    style={{ backgroundColor: "rgba(255, 255, 255, 0.3)" }}
+                  >
                     <Icon className="h-5 w-5" />
                   </span>
-                  <div className="text-left text-sm leading-tight">
+                  <div className="text-left text-base leading-tight">
                     <div className="font-semibold">{title}</div>
                     <div className="text-white/80">{sub}</div>
                   </div>
