@@ -75,10 +75,10 @@ const services: { label: string; icon: LucideIcon }[] = [
   { label: "Junk Removal / Hauling", icon: Trash2 },
   { label: "Handymen", icon: Hammer },
   { label: "House Cleaners", icon: Sparkles },
-  { label: "Lawn Care Professionals", icon: Sprout },
-  { label: "Power Washing Professionals", icon: Droplets },
+  { label: "Lawn Care", icon: Sprout },
+  { label: "Power Washing", icon: Droplets },
   { label: "Carpet Cleaners", icon: CircleDot },
-  { label: "Window / Glass Repairers", icon: Tablet },
+  { label: "Window / Glass Repair", icon: Tablet },
 ];
 
 const trust = [
@@ -179,9 +179,8 @@ function Index() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Featured Home Services
           </h2>
-          <p className="mt-3 max-w-3xl text-muted-foreground">
-            Explore trusted local professionals for home improvement, maintenance, real estate services,
-            and everyday homeowner needs.
+          <p className="mt-3 max-w-5xl whitespace-nowrap text-ellipsis overflow-hidden" style={{ color: "#333333" }}>
+            Explore trusted local professionals for home improvement, maintenance, real estate services, and everyday homeowner needs.
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -191,14 +190,19 @@ function Index() {
                 href="#"
                 className="group rounded-2xl border border-border/70 bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
               >
-                <span
-                  className="mb-10 flex h-11 w-11 items-center justify-center rounded-full"
-                  style={{ backgroundColor: "var(--primary-light)" }}
-                >
-                  <Icon className="h-5 w-5 text-primary" />
-                </span>
-                <div className="text-base font-semibold text-primary group-hover:underline">
-                  {label}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="flex h-8 w-8 items-center justify-center rounded-full flex-shrink-0"
+                      style={{ backgroundColor: "transparent" }}
+                    >
+                      <Icon className="h-5 w-5" style={{ color: "#006ADC" }} />
+                    </span>
+                    <div className="text-sm font-semibold group-hover:underline" style={{ color: "#006ADC" }}>
+                      {label}
+                    </div>
+                  </div>
+                  <ChevronRight className="h-5 w-5 flex-shrink-0" style={{ color: "#006ADC" }} />
                 </div>
               </a>
             ))}
