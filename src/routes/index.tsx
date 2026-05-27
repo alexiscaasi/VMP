@@ -190,12 +190,12 @@ function Index() {
                 href="#"
                 className="group rounded-2xl border bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
                 style={{
-                  borderColor: "hsl(var(--border) / 0.7)",
+                  borderColor: "transparent",
                   transitionProperty: "border-color, transform, box-shadow",
                   transitionDuration: "150ms",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#006ADC")}
-                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "hsl(var(--border) / 0.7)")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "transparent")}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
