@@ -8,7 +8,7 @@ import {
   Home,
   Wind,
   Bath,
-  UtensilsCrossed,
+  Refrigerator,
   HardHat,
   Layers,
   PaintRoller,
@@ -28,8 +28,8 @@ import {
   Sparkles,
   Sprout,
   Droplets,
-  CircleDot,
-  Tablet,
+  Bubbles,
+  MirrorRectangular,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -57,7 +57,7 @@ const services: { label: string; icon: LucideIcon }[] = [
   { label: "Roofing Contractors", icon: Home },
   { label: "HVAC Contractors", icon: Wind },
   { label: "Bathroom Remodelers", icon: Bath },
-  { label: "Kitchen Remodelers", icon: UtensilsCrossed },
+  { label: "Kitchen Remodelers", icon: Refrigerator },
   { label: "General Contractors", icon: HardHat },
   { label: "Flooring Contractors", icon: Layers },
   { label: "Painters", icon: PaintRoller },
@@ -77,8 +77,8 @@ const services: { label: string; icon: LucideIcon }[] = [
   { label: "House Cleaners", icon: Sparkles },
   { label: "Lawn Care", icon: Sprout },
   { label: "Power Washing", icon: Droplets },
-  { label: "Carpet Cleaners", icon: CircleDot },
-  { label: "Window / Glass Repair", icon: Tablet },
+  { label: "Carpet Cleaners", icon: Bubbles },
+  { label: "Window / Glass Repair", icon: MirrorRectangular },
 ];
 
 const trust = [
@@ -188,7 +188,14 @@ function Index() {
               <a
                 key={label}
                 href="#"
-                className="group rounded-2xl border border-border/70 bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+                className="group rounded-2xl border bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                style={{
+                  borderColor: "transparent",
+                  transitionProperty: "border-color, transform, box-shadow",
+                  transitionDuration: "150ms",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#006ADC")}
+                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "transparent")}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -198,7 +205,7 @@ function Index() {
                     >
                       <Icon className="h-5 w-5" style={{ color: "#006ADC" }} />
                     </span>
-                    <div className="text-sm font-semibold group-hover:underline" style={{ color: "#006ADC" }}>
+                    <div className="text-sm font-semibold" style={{ color: "#006ADC" }}>
                       {label}
                     </div>
                   </div>
