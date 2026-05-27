@@ -205,7 +205,7 @@ function Index() {
                     >
                       <Icon className="h-5 w-5" style={{ color: "#006ADC" }} />
                     </span>
-                    <div className="text-sm font-semibold group-hover:underline" style={{ color: "#006ADC" }}>
+                    <div className="text-sm font-semibold" style={{ color: "#006ADC" }}>
                       {label}
                     </div>
                   </div>
