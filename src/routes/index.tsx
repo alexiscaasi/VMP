@@ -8,7 +8,7 @@ import {
   Home,
   Wind,
   Bath,
-  UtensilsCrossed,
+  Refrigerator,
   HardHat,
   Layers,
   PaintRoller,
@@ -28,8 +28,8 @@ import {
   Sparkles,
   Sprout,
   Droplets,
-  CircleDot,
-  Tablet,
+  Bubbles,
+  MirrorRectangular,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -57,7 +57,7 @@ const services: { label: string; icon: LucideIcon }[] = [
   { label: "Roofing Contractors", icon: Home },
   { label: "HVAC Contractors", icon: Wind },
   { label: "Bathroom Remodelers", icon: Bath },
-  { label: "Kitchen Remodelers", icon: UtensilsCrossed },
+  { label: "Kitchen Remodelers", icon: Refrigerator },
   { label: "General Contractors", icon: HardHat },
   { label: "Flooring Contractors", icon: Layers },
   { label: "Painters", icon: PaintRoller },
@@ -77,8 +77,8 @@ const services: { label: string; icon: LucideIcon }[] = [
   { label: "House Cleaners", icon: Sparkles },
   { label: "Lawn Care", icon: Sprout },
   { label: "Power Washing", icon: Droplets },
-  { label: "Carpet Cleaners", icon: CircleDot },
-  { label: "Window / Glass Repair", icon: Tablet },
+  { label: "Carpet Cleaners", icon: Bubbles },
+  { label: "Window / Glass Repair", icon: MirrorRectangular },
 ];
 
 const trust = [
